@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="336" height="128" viewBox="0 0 336 128">
+  <defs>
+    <pattern id="small" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M8 0H0V8" fill="none" stroke="#bdcbd6" stroke-width=".45"/>
+    </pattern>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="url(#small)"/>
+      <path d="M40 0H0V40" fill="none" stroke="#97aab9" stroke-width=".7"/>
+    </pattern>
+    <pattern id="trace" width="84" height="128" patternUnits="userSpaceOnUse">
+      <path d="M0 82H16L20 86L24 7L29 98L34 82H42C48 82 49 69 57 69C65 69 65 82 73 82H84" fill="none" stroke="#30252c" stroke-width="1.65" stroke-linejoin="round" stroke-linecap="round"/>
+    </pattern>
+  </defs>
+  <path fill="#f8f5ee" d="M0 0h336v128H0z"/>
+  <path fill="url(#grid)" d="M0 0h336v128H0z"/>
+  <path fill="url(#trace)" d="M0 0h336v128H0z"/>
+</svg>

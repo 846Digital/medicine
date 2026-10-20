@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#c8d8e6">
+  <meta name="description" content="Марк и Дарья приглашают на свадьбу 20 августа 2027 года. Парк-отель «Дубрава», Самара. Пригласительный эпикриз.">
+  <title>Марк и Дарья — приглашение на свадьбу</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23c8d8e6'/%3E%3Cpath d='M12 5h8v7h7v8h-7v7h-8v-7H5v-8h7z' fill='%23551c25'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/script.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261020-final">
+  <script src="config.js?v=20261020-google-rsvp" defer></script>
+  <script src="assets/gsap.min.js" defer></script>
+  <script src="assets/ScrollTrigger.min.js" defer></script>
+  <script src="assets/ScrollSmoother.min.js" defer></script>
+  <script src="app.js?v=20261020-final" defer></script>
+</head>
+<body>
+  <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="stamp-ink" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="0 0 0 0 .333333 0 0 0 0 .109804 0 0 0 0 .145098 0 -1.2 0 1.2 -.06"/>
+      </filter>
+    </defs>
+  </svg>
+  <div class="cover" id="cover" role="dialog" aria-modal="true" aria-labelledby="cover-title">
+    <div class="medical-folder">
+      <h2 id="cover-title">МЕДИЦИНСКАЯ КАРТА</h2>
+      <div class="file-number"><span>№</span><span class="number-line"><span class="custom-signature" data-file-number>20082027</span></span></div>
+      <div class="cover-patient patient-row"><span>Пациентка</span><span class="signature-line"><span class="custom-signature" data-person="bride">Дарья</span></span></div>
+      <div class="cover-doctor patient-row"><span>Лечащий врач</span><span class="signature-line"><span class="custom-signature" data-person="groom">Марк</span></span></div>
+      <img class="folder-bow" src="assets/bow-cutout.webp" width="1140" height="1380" alt="">
+      <button class="open-stamp" id="open-invitation" type="button" aria-label="Открыть приглашение"><span>ОТКРЫТЬ</span></button>
+    </div>
+  </div>
+  <div id="smooth-wrapper">
+  <div id="smooth-content">
+  <main class="invitation" id="invitation">
+    <section class="hero" aria-labelledby="invitation-title">
+      <div class="hero-intro">
+        <button class="music-button" id="music-button" type="button" aria-pressed="false">
+          <span class="play-disc" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M11 6 26 16 11 26Z" class="play-symbol"/><path d="M10 7h4v18h-4zm8 0h4v18h-4z" class="pause-symbol"/></svg></span>
+          <span id="music-label">Включи звук,<br>для настроения</span>
+        </button>
+        <h1 id="invitation-title" tabindex="-1">ПРИГЛАСИТЕЛЬНЫЙ<br>ЭПИКРИЗ</h1>
+        <p class="hero-subtitle">Дополнительные сведения<br>о пациенте и госпитализации</p>
+        <div class="patient-details">
+          <div class="patient-row"><span>Пациентка</span><span class="signature-line"><span class="custom-signature" data-person="bride">Дарья</span></span></div>
+          <div class="patient-row"><span>Лечащий врач</span><span class="signature-line"><span class="custom-signature" data-person="groom">Марк</span></span></div>
+        </div>
+      </div>
+      <div class="portraits" role="img" aria-label="Фотографии жениха и невесты, скреплённые канцелярской скрепкой">
+        <div class="portrait-man motion-layer" data-photo-variant="cutout"><div class="portrait-man-photo"><img src="assets/groom-photo-without-background.webp" width="1024" height="1536" alt="" data-groom-photo></div></div>
+        <img class="portrait-woman motion-layer" src="assets/portrait-woman.webp" width="708" height="535" alt="">
+        <img class="portrait-clip motion-layer" src="assets/portrait-clip.webp" width="708" height="535" alt="">
+      </div>
+    </section>
+    <section class="diagnosis inset" aria-labelledby="diagnosis-title">
+      <h2 id="diagnosis-title" data-reveal>ОСНОВНОЕ ЗАБОЛЕВАНИЕ</h2>
+      <p class="diagnosis-handwriting" data-reveal>Хроническая влюблённость</p>
+      <img class="diagnosis-stamp" src="assets/diagnosis-stamp.webp" width="388" height="264" alt="Диагноз подтверждён" data-stamp>
+    </section>
+    <section class="symptoms inset" aria-labelledby="symptoms-title">
+      <h2 id="symptoms-title" data-reveal>СОСТОЯНИЕ<br>ПРИ ПОСТУПЛЕНИИ</h2>
+      <p data-reveal>Жалобы:</p>
+      <ul class="symptoms-list">
+        <li data-reveal><span class="checked-box" aria-hidden="true">✓</span>учащенное сердцебиение</li>
+        <li data-reveal><span class="checked-box" aria-hidden="true">✓</span>повышенное артериальное давление</li>
+        <li data-reveal><span class="checked-box" aria-hidden="true">✓</span>головокружение</li>
+        <li data-reveal><span class="checked-box" aria-hidden="true">✓</span>эмоциональная зависимость</li>
+      </ul>
+    </section>
+    <section class="anamnesis" aria-labelledby="history-title">
+      <div class="ecg" aria-hidden="true">
+        <div class="ecg-track"></div>
+      </div>
+      <div class="stethoscope-scene"><img class="stethoscope" src="assets/stethoscope-cutout.webp" width="1713" height="918" alt="" loading="lazy"></div>
+      <div class="clipboard-wrap">
+        <article class="clipboard" data-clipboard>
+          <div class="clipboard-paper">
+            <h2 id="history-title">АНАМНЕЗ ЗАБОЛЕВАНИЯ</h2>
+            <p>Пациентка <span data-person="bride">Дарья</span> обратилась в клинику с жалобами на острую нехватку внимания и повышенную чувствительность к одному конкретному стоматологу.</p>
+            <p>В ходе первичного осмотра врачом была выявлена полная совместимость. После курса терапии (первого свидания) состояние пациентки резко улучшилось, но появилась стойкая эмоциональная зависимость.</p>
+            <p>На протяжении длительного времени наблюдалось периодическое общение, которое перешло в хроническую форму. Диагноз подтверждён.</p>
+            <h3>ЗАКЛЮЧЕНИЕ СПЕЦИАЛИСТА</h3>
+            <p>В ходе обследования установлено:</p>
+            <div class="handwritten-conclusion">Полная совместимость, рекомендована регистрация брака.</div>
+          </div>
+          <img class="clipboard-clip" src="assets/clipboard-clip-cutout.webp" width="2172" height="724" alt="">
+        </article>
+      </div>
+    </section>
+    <section class="medical-collage" aria-labelledby="roles-title">
+      <div class="xray-vial">
+        <img class="xray motion-layer" src="assets/ruka.png" width="1086" height="1448" alt="Рентгеновский снимок руки с обручальным кольцом на фоне букета роз" loading="lazy" data-xray>
+        <img class="love-vial motion-layer" src="assets/love-vial-cutout.webp" width="1069" height="1471" alt="" loading="lazy">
+      </div>
+      <div class="roles-scene">
+      <div class="medical-roles inset">
+        <h2 id="roles-title" data-reveal>УЧАСТНИКИ ИСТОРИИ</h2>
+        <ul class="roles-list">
+          <li class="role-row" data-reveal>
+            <svg class="role-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 9c-4-5-12-5-14 2-2 6 2 11 3 15 1 4 2 9 5 9 3 0 2-12 6-12s3 12 6 12c3 0 4-5 5-9 1-4 5-9 3-15-2-7-10-7-14-2Z"/><path d="M14 7c3 1 5 3 6 5"/></svg>
+            <div><h3>ЖЕНИХ</h3><p class="role-name" data-person="groom">Марк</p><p class="role-description">В роли врача — стоматолога</p></div>
+          </li>
+          <li class="role-row" data-reveal>
+            <svg class="role-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 34S5 24 5 14a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 10-15 20-15 20Z"/><path d="M9 20h6l3-6 4 13 3-7h6"/></svg>
+            <div><h3>НЕВЕСТА</h3><p class="role-name" data-person="bride">Дарья</p><p class="role-description">В роли пациентки</p></div>
+          </li>
+        </ul>
+      </div>
+      </div>
+      <img class="wedding-stamp" src="assets/wedding-stamp.webp" width="408" height="310" alt="Назначить свадьбу" loading="lazy" data-stamp>
+    </section>
+    <section class="wedding-date inset" aria-labelledby="date-title">
+      <h2 id="date-title" data-reveal>ДАТА РЕГИСТРАЦИИ БРАКА</h2>
+      <p data-reveal>Операция по официальному<br>соединению судеб состоится:</p>
+      <div class="date-line" data-reveal><time class="custom-signature" datetime="2027-08-20" data-wedding-date>20.08.2027</time></div>
+    </section>
+    <div class="rings-scene"><div class="rings" data-rings><img class="rings-art" src="assets/rings-cutout.webp" width="1792" height="878" alt="Рука в медицинской перчатке держит два обручальных кольца" loading="lazy"></div></div>
+    <section class="venue inset" aria-labelledby="venue-title">
+      <h2 id="venue-title" data-reveal>ЛОКАЦИЯ ОПЕРАЦИОННОЙ</h2>
+      <p class="restaurant-label" data-venue-type data-reveal>Парк-отель</p>
+      <div class="venue-name" data-reveal><span class="custom-signature" data-venue-name>«Дубрава»</span></div>
+      <p class="venue-address" data-reveal><span data-address>Самара, посёлок Управленческий, Красноглинское шоссе, 40</span></p>
+    </section>
+    <div class="iv-scene" aria-hidden="true">
+      <div class="iv-art">
+        <img class="iv-bag" src="assets/iv-cutout.webp" width="1181" height="1332" loading="lazy" alt="" data-iv>
+        <svg class="iv-tube" viewBox="0 0 210 230"><path d="M137 0C111 43 80 93 82 133L89 213C116 193 175 192 196 158C231 113 177 93 146 125C145 86 100 72 84 112" fill="none" stroke="#d5d4d9" stroke-width="5" stroke-linecap="round"/><path d="M137 0C111 43 80 93 82 133L89 213C116 193 175 192 196 158C231 113 177 93 146 125C145 86 100 72 84 112" fill="none" stroke="#f8f8fb" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <section class="schedule inset" aria-labelledby="schedule-title">
+      <h2 id="schedule-title" data-reveal>ПРОГРАММА КОНСИЛИУМА</h2>
+      <ol class="schedule-list">
+        <li data-reveal><time datetime="16:00">16:00–17:00</time><div><h3>ВЕЛКОМ</h3><p>Прибытие приглашенных специалистов<br>в операционный блок,<br>приветственный фуршет.</p></div></li>
+        <li data-reveal><time datetime="17:00">17:00–23:00</time><div><h3>БАНКЕТ</h3><p>Торжественный банкет, терапия танцами и контролируемое повышение уровня счастья.</p></div></li>
+      </ol>
+    </section>
+    <div class="pills-scene"><img class="heart-pills" src="assets/heart-pills-cutout.webp" width="1558" height="1010" alt="Блистер с таблетками в форме бордовых сердец" loading="lazy" data-pills></div>
+    <section class="dress-code inset" aria-labelledby="dress-title">
+      <h2 id="dress-title" data-reveal>ПРОТОКОЛ ВНЕШНЕГО ВИДА</h2>
+      <p data-reveal>Допуск в операционный блок — в цветах нашей свадьбы. Будем рады, если вы поддержите бордовые и пыльно-голубые оттенки в своих нарядах.</p>
+      <div class="dress-palette" data-reveal>
+        <div class="palette-color"><span class="swatch burgundy" aria-hidden="true"></span><span>Бордовый</span></div>
+        <div class="palette-color"><span class="swatch dusty-blue" aria-hidden="true"></span><span>Пыльно-голубой</span></div>
+      </div>
+      <div class="outfit-group">
+        <h3>ЖЕНЩИНЫ</h3>
+        <img class="outfits women-outfits" src="assets/dress-women.webp" width="1536" height="1024" alt="Примеры женских образов: бордовые и пыльно-голубые платья" loading="lazy">
+      </div>
+      <div class="outfit-group">
+        <h3>МУЖЧИНЫ</h3>
+        <img class="outfits men-outfits" src="assets/dress-men.webp" width="1536" height="1024" alt="Примеры мужских образов: бордовые костюмы, пыльно-голубые рубашки и нейтральные брюки" loading="lazy">
+      </div>
+      <p class="dress-note">Примеры образов в палитре нашей свадьбы.</p>
+    </section>
+    <section class="rsvp inset" aria-labelledby="rsvp-title">
+      <h2 id="rsvp-title" data-reveal>АНКЕТА<br>УЧАСТНИКА КОНСИЛИУМА</h2>
+      <form id="rsvp-form">
+        <fieldset class="attendance"><legend>Придете на свадьбу?</legend><label class="option"><input type="radio" name="attendance" value="yes" required><span>Да, с радостью</span></label><label class="option"><input type="radio" name="attendance" value="no"><span>К сожалению, не смогу</span></label></fieldset>
+        <label class="name-label" for="guest-name">Напишите ваше ФИО</label>
+        <textarea id="guest-name" name="guests" rows="3" placeholder="Можно указать несколько" autocomplete="name" required maxlength="1000"></textarea>
+        <fieldset class="drinks"><legend>Что предпочитаете?</legend><p class="form-hint" id="drinks-hint">Можно выбрать несколько вариантов</p>
+          <label class="option"><input type="checkbox" name="drinks" value="Красное вино (сухое)"><span>Красное вино (сухое)</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Красное вино (полусладкое)"><span>Красное вино (полусладкое)</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Белое вино (сухое)"><span>Белое вино (сухое)</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Белое вино (полусладкое)"><span>Белое вино (полусладкое)</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Водка"><span>Водка</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Коньяк"><span>Коньяк</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Виски"><span>Виски</span></label>
+          <label class="option"><input type="checkbox" name="drinks" value="Безалкогольные напитки"><span>Безалкогольные напитки</span></label>
+        </fieldset>
+        <button class="submit-button" type="submit">ОТПРАВИТЬ</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+      </form>
+    </section>
+    <section class="dream-envelope inset" aria-labelledby="dream-envelope-title">
+      <h2 id="dream-envelope-title">КОНВЕРТ НА МЕЧТУ</h2>
+      <p>Мы будем очень благодарны, если вместо цветов Вы поддержите нашу мечту о свадебном путешествии. Ваш денежный подарок станет частью незабываемых воспоминаний.</p>
+    </section>
+    <div class="closing-scene"><figure class="closing-photo"><img src="assets/couple.webp" width="571" height="624" alt="Марк и Дарья вместе в светло-голубых костюмах" loading="lazy" data-closing-photo><figcaption><span data-person="groom">Марк</span> и <span data-person="bride">Дарья</span></figcaption></figure></div>
+  </main>
+  </div>
+  </div>
+  <noscript><style>.cover{display:none}.invitation[inert]{pointer-events:auto}</style><p class="noscript-note">Для музыки и заполнения анкеты включите JavaScript в браузере.</p></noscript>
+</body>
+</html>
