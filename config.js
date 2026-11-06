@@ -12,6 +12,7 @@ window.INVITATION_CONFIG = {
   groomPhoto: 'assets/groom-photo-with-background.webp',
   groomPhotoCutout: 'assets/groom-photo-without-background.webp',
   groomPhotoVariant: 'cutout',
+  bridePhoto: 'assets/bride-photo-without-background.webp',
   closingPhoto: 'assets/couple.webp',
   // Фоновая музыка: Дмитрий Журавлёв — «Люблю любую».
   music: 'assets/dmitriy-zhuravlev-lyublyu-lyubuyu.mp3',

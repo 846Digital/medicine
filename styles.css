@@ -75,7 +75,9 @@ h1, h2, h3, p { margin: 0; }
 .portrait-man-photo { position: absolute; inset: 0; clip-path: polygon(6.2% 4.4%, 43.2% 11.3%, 50.8% 94.9%, 1.5% 88.9%); }
 .portrait-man-photo img { width: 52.3%; height: 100%; object-fit: cover; object-position: 50% 50%; transform: scale(1.9); transform-origin: 50% 23%; }
 .portrait-man[data-photo-variant='cutout'] .portrait-man-photo img { transform: translateY(15.8%) scale(1.61); transform-origin: 50% 0; }
-.portrait-woman { clip-path: polygon(44.5% 9.7%, 98.4% .9%, 100% 91.4%, 52.3% 98.1%); filter: saturate(.84) contrast(1.025); }
+.portrait-woman { clip-path: polygon(44.5% 9.7%, 98.4% .9%, 100% 91.4%, 52.3% 98.1%); background: var(--note-paper); filter: saturate(.84) contrast(1.025); }
+.portrait-woman-photo { position: absolute; inset: 0; clip-path: polygon(46% 11.2%, 97% 2.6%, 98.5% 89.7%, 53.6% 94.9%); }
+.portrait-woman-photo img { position: absolute; left: 44.5%; width: 55.5%; height: 100%; object-fit: cover; object-position: 50% 50%; transform: translateY(9%) scale(1.05); transform-origin: 50% 0; }
 .portrait-clip { pointer-events: none; }
 .diagnosis { margin-top: 13cqw; }
 .diagnosis-handwriting { margin-top: 4cqw; font-family: var(--font-handwriting); font-size: 7cqw; line-height: 1.25; color: var(--stamp); }

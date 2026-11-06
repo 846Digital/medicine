@@ -74,6 +74,8 @@ if (groomPhoto) {
   if (source) groomPhoto.src = source;
   groomPhoto.closest('.portrait-man').dataset.photoVariant = variant;
 }
+const bridePhoto = document.querySelector('[data-bride-photo]');
+if (bridePhoto && config.bridePhoto) bridePhoto.src = config.bridePhoto;
 
 document.querySelector('[data-closing-photo]').src = config.closingPhoto;
 
