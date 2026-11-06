@@ -173,6 +173,10 @@ textarea::placeholder { color: var(--muted-ink); opacity: 1; }
 .dream-envelope { margin-top: 13cqw; text-align: center; }
 .dream-envelope h2 { text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px; }
 .dream-envelope p { margin-top: 6cqw; font-size: clamp(13px, 3.6cqw, 17.28px); line-height: 1.5; text-wrap: pretty; }
+.closing-message { margin-block-start: 64px; text-align: center; color: var(--stamp); }
+.closing-message h2 { max-inline-size: 11ch; margin-inline: auto; font-size: 2.25rem; line-height: calc(40 / 36); text-wrap: balance; }
+.closing-message p { margin-block-start: 16px; font-family: var(--font-handwriting); font-size: 1.875rem; line-height: 1.2; overflow-wrap: break-word; text-wrap: pretty; }
+.closing-message-heart { display: block; margin: 16px auto 0; fill: currentColor; }
 .closing-scene { width: 86%; margin: 12cqw auto 0; }
 .closing-photo { width: 100%; margin: 0; background: var(--note-paper) url('assets/paper-grain.svg'); padding: 4cqw 4cqw 7cqw; transform: rotate(1.5deg); box-shadow: 1px 4px 13px var(--shadow); }
 .closing-photo img { width: 100%; aspect-ratio: 571 / 624; object-fit: cover; object-position: 50% 62%; filter: saturate(.8) contrast(1.03); }
